@@ -28,17 +28,21 @@ export default function Counter() {
      //random num between 0 & 10
   const randomNum = Math.floor(Math.random() * 10)
 
-  
+
   useEffect(()=> {
     console.log('component mounting') 
     setCount(randomNum)
-  }, [])
+  }, [randomNum])
 
 
     const handleDecrese = () => {
       setCount(prev => prev - 1)
     }
   // Third iteration
+
+    useEffect (() => {
+
+    },[])
 
   return (
     <div>
